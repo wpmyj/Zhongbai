@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="DasherStation" Class="BalanceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.fundsRecorder" Member="FundsRecorder">
+    <Type Name="FundsRecorder">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="customerId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ciid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tuid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="paidup" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="checkNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" AutoSync="Never" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="invoiceNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="cash1" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="cash2" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.arrearage" Member="Arrearage">
+    <Type Name="Arrearage">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="piId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="tuId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="due" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="paidUp" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[default]" Member="default" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="inputDate" AutoSync="Never" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.accountReceivable" Member="AccountReceivable">
+    <Type Name="AccountReceivable">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ciId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="accountReceivable" Member="accountReceivable1" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="accept" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="[default]" Member="default" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="inputDate" AutoSync="Never" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

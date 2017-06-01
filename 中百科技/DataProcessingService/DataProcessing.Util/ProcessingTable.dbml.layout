@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 17.625" name="ProcessingTable">
+  <DataContextMoniker Name="/ProcessingTableDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cb09398f-c442-4a88-b408-e0e9469bacb1" absoluteBounds="0.75, 0.75, 2, 6.1697005208333326">
+      <DataClassMoniker Name="/ProcessingTableDataContext/EquipmentInformation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73cb26f3-dbb1-44f1-afd7-f90350b13282" absoluteBounds="0.76500000000000012, 1.21, 1.9700000000000002, 5.609700520833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03cd7b0d-445a-4da6-bcbf-8543aa26ed22" absoluteBounds="0.75, 15.375, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/ProcessingTableDataContext/FlowmeterNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf743714-9c87-4664-9800-91045ac41361" absoluteBounds="0.76499999999999968, 15.835, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="444c3ab4-b950-44ae-93ca-e7fe5ba6a659" absoluteBounds="3.5, 7.625, 2, 2.2914453125">
+      <DataClassMoniker Name="/ProcessingTableDataContext/TemperatureNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2481fcc5-9445-4bdc-8db1-2a559e8969d2" absoluteBounds="3.5149999999999997, 8.085, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81f3a34a-24de-4729-bd7e-9436532ca78c" absoluteBounds="6.375, 7.625, 2, 2.2914453125">
+      <DataClassMoniker Name="/ProcessingTableDataContext/TemperatureHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a8a47c0-9bf9-4dc3-a6f2-895d6828fab8" absoluteBounds="6.3900000000000006, 8.085, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9241eef9-a9f2-40a7-86ac-21dfbcd472b3" absoluteBounds="0.75, 7.625, 2, 2.6286848958333331">
+      <DataClassMoniker Name="/ProcessingTableDataContext/LiquidMatterStockList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="202b5f71-deaf-4ef4-a9c9-efa682380c63" absoluteBounds="0.765, 8.085, 1.9700000000000002, 2.068684895833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c4efe5a7-0e82-49bc-b88c-df05d6a4371e" absoluteBounds="0.75, 11.5, 2, 2.2914453125">
+      <DataClassMoniker Name="/ProcessingTableDataContext/LiquidPositionNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1177f64-aa09-4f4b-9bd9-d8241350b735" absoluteBounds="0.76500000000000012, 11.96, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="341ae97f-7f92-45e8-b4c1-3b820c7265b8" absoluteBounds="6.375, 11.5, 2, 1.7855859375">
+      <DataClassMoniker Name="/ProcessingTableDataContext/LiquidPositionHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebd1aa17-73ac-4ee7-80e4-53449a75f24e" absoluteBounds="6.39, 11.96, 1.9700000000000002, 1.2255859375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 9.04795572916667); (6.375 : 9.04795572916667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProcessingTableDataContext/TemperatureNo/TemperatureNo_TemperatureHistory" />
+      <nodes>
+        <classShapeMoniker Id="444c3ab4-b950-44ae-93ca-e7fe5ba6a659" />
+        <classShapeMoniker Id="81f3a34a-24de-4729-bd7e-9436532ca78c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 6.91970052083333); (1.75 : 7.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProcessingTableDataContext/EquipmentInformation/EquipmentInformation_LiquidMatterStockList" />
+      <nodes>
+        <classShapeMoniker Id="cb09398f-c442-4a88-b408-e0e9469bacb1" />
+        <classShapeMoniker Id="9241eef9-a9f2-40a7-86ac-21dfbcd472b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 8.77072265625); (2.75 : 8.77072265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProcessingTableDataContext/TemperatureNo/TemperatureNo_LiquidMatterStockList" />
+      <nodes>
+        <classShapeMoniker Id="444c3ab4-b950-44ae-93ca-e7fe5ba6a659" />
+        <classShapeMoniker Id="9241eef9-a9f2-40a7-86ac-21dfbcd472b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 11.5); (1.75 : 10.2536848958333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProcessingTableDataContext/LiquidPositionNo/LiquidPositionNo_LiquidMatterStockList" />
+      <nodes>
+        <classShapeMoniker Id="c4efe5a7-0e82-49bc-b88c-df05d6a4371e" />
+        <classShapeMoniker Id="9241eef9-a9f2-40a7-86ac-21dfbcd472b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.6700260416667); (6.375 : 12.6700260416667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProcessingTableDataContext/LiquidPositionNo/LiquidPositionNo_LiquidPositionHistory" />
+      <nodes>
+        <classShapeMoniker Id="c4efe5a7-0e82-49bc-b88c-df05d6a4371e" />
+        <classShapeMoniker Id="341ae97f-7f92-45e8-b4c1-3b820c7265b8" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f8c5d404-be7b-4f4b-bba7-df2694fab593" absoluteBounds="9.75, 0.875, 2, 4.8207421875">
+      <DataClassMoniker Name="/ProcessingTableDataContext/ProduceMeasureMonitor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3715a892-9576-4abf-aa83-53a3c601b4b2" absoluteBounds="9.765, 1.3350000000000009, 1.9700000000000002, 4.2607421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a83dd85-59b6-4c9c-a330-fea3d7134d57" absoluteBounds="6, 4.625, 2, 1.6169661458333331">
+      <DataClassMoniker Name="/ProcessingTableDataContext/EmulsificationGatherProduceLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="941e42dd-b3d4-48fc-a4bb-6c4869cb547e" absoluteBounds="6.015, 5.085, 1.9700000000000002, 1.0569661458333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.93641276041667); (9.75 : 3.93641276041667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProcessingTableDataContext/EquipmentInformation/EquipmentInformation_ProduceMeasureMonitor" />
+      <nodes>
+        <classShapeMoniker Id="cb09398f-c442-4a88-b408-e0e9469bacb1" />
+        <classShapeMoniker Id="f8c5d404-be7b-4f4b-bba7-df2694fab593" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.43348307291667); (6 : 5.43348307291667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProcessingTableDataContext/EquipmentInformation/EquipmentInformation_EmulsificationGatherProduceLog" />
+      <nodes>
+        <classShapeMoniker Id="cb09398f-c442-4a88-b408-e0e9469bacb1" />
+        <classShapeMoniker Id="8a83dd85-59b6-4c9c-a330-fea3d7134d57" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="564bc866-f913-4821-8fae-6606d330434a" absoluteBounds="5.625, 1.125, 2, 2.1228255208333335">
+      <DataClassMoniker Name="/ProcessingTableDataContext/DeepFatConsumeDailyStatisticsDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d854ac92-b4ce-4546-84ff-b4ce38f8cbc9" absoluteBounds="5.64, 1.585, 1.9700000000000002, 1.5628255208333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.18641276041667); (5.625 : 2.18641276041667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProcessingTableDataContext/EquipmentInformation/EquipmentInformation_deepFatConsumeDailyStatisticsDetail" />
+      <nodes>
+        <classShapeMoniker Id="cb09398f-c442-4a88-b408-e0e9469bacb1" />
+        <classShapeMoniker Id="564bc866-f913-4821-8fae-6606d330434a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5563bb4a-75ea-4a1e-9e7f-2a5ba334edf4" absoluteBounds="4.25, 15.375, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/ProcessingTableDataContext/FlowmeterHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="098fe3c7-7a55-4701-8b71-9542caa5c330" absoluteBounds="4.265, 15.835, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 16.3521028645833); (4.25 : 16.3521028645833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProcessingTableDataContext/FlowmeterNo/FlowmeterNo_flowmeterHistory" />
+      <nodes>
+        <classShapeMoniker Id="03cd7b0d-445a-4da6-bcbf-8543aa26ed22" />
+        <classShapeMoniker Id="5563bb4a-75ea-4a1e-9e7f-2a5ba334edf4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

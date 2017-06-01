@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PayOffDTS" targetNamespace="http://tempuri.org/PayOffDTS.xsd" xmlns:mstns="http://tempuri.org/PayOffDTS.xsd" xmlns="http://tempuri.org/PayOffDTS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PayOffDTS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PayOffDTS" msprop:Generator_DataSetName="PayOffDTS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="payOffDetail" msprop:Generator_UserTableName="payOffDetail" msprop:Generator_RowDeletedName="payOffDetailRowDeleted" msprop:Generator_RowChangedName="payOffDetailRowChanged" msprop:Generator_RowClassName="payOffDetailRow" msprop:Generator_RowChangingName="payOffDetailRowChanging" msprop:Generator_RowEvArgName="payOffDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="payOffDetailRowChangeEventHandler" msprop:Generator_TableClassName="payOffDetailDataTable" msprop:Generator_TableVarName="tablepayOffDetail" msprop:Generator_RowDeletingName="payOffDetailRowDeleting" msprop:Generator_TablePropName="payOffDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:long" />
+              <xs:element name="paid" msprop:Generator_UserColumnName="paid" msprop:Generator_ColumnPropNameInRow="paid" msprop:Generator_ColumnVarNameInTable="columnpaid" msprop:Generator_ColumnPropNameInTable="paidColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="piId" msprop:Generator_UserColumnName="piId" msprop:Generator_ColumnPropNameInRow="piId" msprop:Generator_ColumnVarNameInTable="columnpiId" msprop:Generator_ColumnPropNameInTable="piIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="money" msprop:Generator_UserColumnName="money" msprop:Generator_ColumnPropNameInRow="money" msprop:Generator_ColumnVarNameInTable="columnmoney" msprop:Generator_ColumnPropNameInTable="moneyColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month" msprop:Generator_UserColumnName="month" msprop:Generator_ColumnPropNameInRow="month" msprop:Generator_ColumnVarNameInTable="columnmonth" msprop:Generator_ColumnPropNameInTable="monthColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="inputDate" msprop:Generator_UserColumnName="inputDate" msprop:Generator_ColumnPropNameInRow="inputDate" msprop:Generator_ColumnVarNameInTable="columninputDate" msprop:Generator_ColumnPropNameInTable="inputDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="inputMan" msprop:Generator_UserColumnName="inputMan" msprop:Generator_ColumnPropNameInRow="inputMan" msprop:Generator_ColumnVarNameInTable="columninputMan" msprop:Generator_ColumnPropNameInTable="inputManColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pogId" msprop:Generator_UserColumnName="pogId" msprop:Generator_ColumnVarNameInTable="columnpogId" msprop:Generator_ColumnPropNameInRow="pogId" msprop:Generator_ColumnPropNameInTable="pogIdColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="payOffGather" msprop:Generator_UserTableName="payOffGather" msprop:Generator_RowDeletedName="payOffGatherRowDeleted" msprop:Generator_RowChangedName="payOffGatherRowChanged" msprop:Generator_RowClassName="payOffGatherRow" msprop:Generator_RowChangingName="payOffGatherRowChanging" msprop:Generator_RowEvArgName="payOffGatherRowChangeEvent" msprop:Generator_RowEvHandlerName="payOffGatherRowChangeEventHandler" msprop:Generator_TableClassName="payOffGatherDataTable" msprop:Generator_TableVarName="tablepayOffGather" msprop:Generator_RowDeletingName="payOffGatherRowDeleting" msprop:Generator_TablePropName="payOffGather">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:long" />
+              <xs:element name="piId" msprop:Generator_UserColumnName="piId" msprop:Generator_ColumnPropNameInRow="piId" msprop:Generator_ColumnVarNameInTable="columnpiId" msprop:Generator_ColumnPropNameInTable="piIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="realIncome" msprop:Generator_UserColumnName="realIncome" msprop:Generator_ColumnPropNameInRow="realIncome" msprop:Generator_ColumnVarNameInTable="columnrealIncome" msprop:Generator_ColumnPropNameInTable="realIncomeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="month" msprop:Generator_UserColumnName="month" msprop:Generator_ColumnPropNameInRow="month" msprop:Generator_ColumnVarNameInTable="columnmonth" msprop:Generator_ColumnPropNameInTable="monthColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="inputDate" msprop:Generator_UserColumnName="inputDate" msprop:Generator_ColumnPropNameInRow="inputDate" msprop:Generator_ColumnVarNameInTable="columninputDate" msprop:Generator_ColumnPropNameInTable="inputDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="inputMan" msprop:Generator_UserColumnName="inputMan" msprop:Generator_ColumnPropNameInRow="inputMan" msprop:Generator_ColumnVarNameInTable="columninputMan" msprop:Generator_ColumnPropNameInTable="inputManColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cHumanName" msprop:Generator_UserColumnName="cHumanName" msprop:Generator_ColumnPropNameInRow="cHumanName" msprop:Generator_ColumnVarNameInTable="columncHumanName" msprop:Generator_ColumnPropNameInTable="cHumanNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInTable="nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:payOffDetail" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="payOffGather_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:payOffGather" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

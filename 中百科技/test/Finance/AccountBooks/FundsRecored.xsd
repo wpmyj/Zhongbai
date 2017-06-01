@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="tFundsRecorderInfo" targetNamespace="http://tempuri.org/tFundsRecorderInfo.xsd" xmlns:mstns="http://tempuri.org/tFundsRecorderInfo.xsd" xmlns="http://tempuri.org/tFundsRecorderInfo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="tFundsRecorderInfo" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="tFundsRecorderInfo" msprop:Generator_DataSetName="tFundsRecorderInfo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tFundsRecorder" msprop:Generator_UserTableName="tFundsRecorder" msprop:Generator_RowDeletedName="tFundsRecorderRowDeleted" msprop:Generator_RowChangedName="tFundsRecorderRowChanged" msprop:Generator_RowClassName="tFundsRecorderRow" msprop:Generator_RowChangingName="tFundsRecorderRowChanging" msprop:Generator_RowEvArgName="tFundsRecorderRowChangeEvent" msprop:Generator_RowEvHandlerName="tFundsRecorderRowChangeEventHandler" msprop:Generator_TableClassName="tFundsRecorderDataTable" msprop:Generator_TableVarName="tabletFundsRecorder" msprop:Generator_RowDeletingName="tFundsRecorderRowDeleting" msprop:Generator_TablePropName="tFundsRecorder">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:long" />
+              <xs:element name="customerId" msprop:Generator_UserColumnName="customerId" msprop:Generator_ColumnVarNameInTable="columncustomerId" msprop:Generator_ColumnPropNameInRow="customerId" msprop:Generator_ColumnPropNameInTable="customerIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="ciId" msprop:Generator_UserColumnName="ciId" msprop:Generator_ColumnVarNameInTable="columnciId" msprop:Generator_ColumnPropNameInRow="ciId" msprop:Generator_ColumnPropNameInTable="ciIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="tuId" msprop:Generator_UserColumnName="tuId" msprop:Generator_ColumnVarNameInTable="columntuId" msprop:Generator_ColumnPropNameInRow="tuId" msprop:Generator_ColumnPropNameInTable="tuIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="paidUp" msprop:Generator_UserColumnName="paidUp" msprop:Generator_ColumnVarNameInTable="columnpaidUp" msprop:Generator_ColumnPropNameInRow="paidUp" msprop:Generator_ColumnPropNameInTable="paidUpColumn" type="xs:decimal" />
+              <xs:element name="type" msprop:Generator_UserColumnName="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" type="xs:string" />
+              <xs:element name="checkNo" msprop:Generator_UserColumnName="checkNo" msprop:Generator_ColumnVarNameInTable="columncheckNo" msprop:Generator_ColumnPropNameInRow="checkNo" msprop:Generator_ColumnPropNameInTable="checkNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="inputDate" msprop:Generator_UserColumnName="inputDate" msprop:Generator_ColumnVarNameInTable="columninputDate" msprop:Generator_ColumnPropNameInRow="inputDate" msprop:Generator_ColumnPropNameInTable="inputDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invoiceNo" msprop:Generator_UserColumnName="invoiceNo" msprop:Generator_ColumnVarNameInTable="columninvoiceNo" msprop:Generator_ColumnPropNameInRow="invoiceNo" msprop:Generator_ColumnPropNameInTable="invoiceNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="inputMan" msprop:Generator_UserColumnName="inputMan" msprop:Generator_ColumnVarNameInTable="columninputMan" msprop:Generator_ColumnPropNameInRow="inputMan" msprop:Generator_ColumnPropNameInTable="inputManColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" msprop:Generator_UserColumnName="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="cash1" msprop:Generator_UserColumnName="cash1" msprop:Generator_ColumnPropNameInRow="cash1" msprop:Generator_ColumnVarNameInTable="columncash1" msprop:Generator_ColumnPropNameInTable="cash1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cash2" msprop:Generator_UserColumnName="cash2" msprop:Generator_ColumnPropNameInRow="cash2" msprop:Generator_ColumnVarNameInTable="columncash2" msprop:Generator_ColumnPropNameInTable="cash2Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

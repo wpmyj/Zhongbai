@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasherStation", "DasherStation.csproj", "{D0803B27-E03D-44B7-ADCB-3439BC4CC830}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = DasherStation.csproj
+		SccProjectName0 = \u0022$/02研发部/开发库/工作区/拌和站二代一期/02开发/2.3编码/DasherStation\u0022,\u0020QQKDAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0803B27-E03D-44B7-ADCB-3439BC4CC830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0803B27-E03D-44B7-ADCB-3439BC4CC830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0803B27-E03D-44B7-ADCB-3439BC4CC830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0803B27-E03D-44B7-ADCB-3439BC4CC830}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

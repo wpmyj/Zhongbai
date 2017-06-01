@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[DataProcessingService.csproj]
+SCC_Aux_Path = "\\192.168.1.203\vss"
+SCC_Project_Name = "$/02研发部/开发库/工作区/拌和站二代一期/02开发/2.3编码/DasherStation/拌合站数据采集服务程序/DataProcessingService/DataProcessingService", BTRDAAAA

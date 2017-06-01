@@ -6,10 +6,15 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		89C8EB181EDFFD2D00FF27DD /* 中百科技 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "中百科技"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		89C8EB111EDFFC6A00FF27DD = {
 			isa = PBXGroup;
 			children = (
+				89C8EB181EDFFD2D00FF27DD /* 中百科技 */,
 			);
 			sourceTree = "<group>";
 		};

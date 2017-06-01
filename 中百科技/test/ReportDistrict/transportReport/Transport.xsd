@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Transport" targetNamespace="http://tempuri.org/Transport.xsd" xmlns:mstns="http://tempuri.org/Transport.xsd" xmlns="http://tempuri.org/Transport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Transport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Transport" msprop:Generator_DataSetName="Transport" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="transportCheck" msprop:Generator_UserTableName="transportCheck" msprop:Generator_RowDeletedName="transportCheckRowDeleted" msprop:Generator_RowChangedName="transportCheckRowChanged" msprop:Generator_RowClassName="transportCheckRow" msprop:Generator_RowChangingName="transportCheckRowChanging" msprop:Generator_RowEvArgName="transportCheckRowChangeEvent" msprop:Generator_RowEvHandlerName="transportCheckRowChangeEventHandler" msprop:Generator_TableClassName="transportCheckDataTable" msprop:Generator_TableVarName="tabletransportCheck" msprop:Generator_RowDeletingName="transportCheckRowDeleting" msprop:Generator_TablePropName="transportCheck">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sort" msprop:Generator_UserColumnName="sort" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnPropNameInTable="sortColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="materialName" msprop:Generator_UserColumnName="materialName" msprop:Generator_ColumnPropNameInRow="materialName" msprop:Generator_ColumnVarNameInTable="columnmaterialName" msprop:Generator_ColumnPropNameInTable="materialNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="model" msprop:Generator_UserColumnName="model" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInTable="modelColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="startSite" msprop:Generator_UserColumnName="startSite" msprop:Generator_ColumnPropNameInRow="startSite" msprop:Generator_ColumnVarNameInTable="columnstartSite" msprop:Generator_ColumnPropNameInTable="startSiteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="endSite" msprop:Generator_UserColumnName="endSite" msprop:Generator_ColumnPropNameInRow="endSite" msprop:Generator_ColumnVarNameInTable="columnendSite" msprop:Generator_ColumnPropNameInTable="endSiteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="quantity" msprop:Generator_UserColumnName="quantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="distance" msprop:Generator_UserColumnName="distance" msprop:Generator_ColumnPropNameInRow="distance" msprop:Generator_ColumnVarNameInTable="columndistance" msprop:Generator_ColumnPropNameInTable="distanceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="unitPrice" msprop:Generator_UserColumnName="unitPrice" msprop:Generator_ColumnPropNameInRow="unitPrice" msprop:Generator_ColumnVarNameInTable="columnunitPrice" msprop:Generator_ColumnPropNameInTable="unitPriceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="money" msprop:Generator_UserColumnName="money" msprop:Generator_ColumnPropNameInRow="money" msprop:Generator_ColumnVarNameInTable="columnmoney" msprop:Generator_ColumnPropNameInTable="moneyColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="transportCheckDetail" msprop:Generator_UserTableName="transportCheckDetail" msprop:Generator_RowDeletedName="transportCheckDetailRowDeleted" msprop:Generator_TableClassName="transportCheckDetailDataTable" msprop:Generator_RowChangedName="transportCheckDetailRowChanged" msprop:Generator_RowClassName="transportCheckDetailRow" msprop:Generator_RowChangingName="transportCheckDetailRowChanging" msprop:Generator_RowEvArgName="transportCheckDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="transportCheckDetailRowChangeEventHandler" msprop:Generator_TablePropName="transportCheckDetail" msprop:Generator_TableVarName="tabletransportCheckDetail" msprop:Generator_RowDeletingName="transportCheckDetailRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idx" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="idx" msprop:Generator_ColumnPropNameInRow="idx" msprop:Generator_ColumnVarNameInTable="columnidx" msprop:Generator_ColumnPropNameInTable="idxColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_UserColumnName="date" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInTable="dateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="no" msprop:Generator_UserColumnName="no" msprop:Generator_ColumnPropNameInRow="no" msprop:Generator_ColumnVarNameInTable="columnno" msprop:Generator_ColumnPropNameInTable="noColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="supplierName" msprop:Generator_UserColumnName="supplierName" msprop:Generator_ColumnPropNameInRow="supplierName" msprop:Generator_ColumnVarNameInTable="columnsupplierName" msprop:Generator_ColumnPropNameInTable="supplierNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="transportName" msprop:Generator_UserColumnName="transportName" msprop:Generator_ColumnPropNameInRow="transportName" msprop:Generator_ColumnVarNameInTable="columntransportName" msprop:Generator_ColumnPropNameInTable="transportNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="sort" msprop:Generator_UserColumnName="sort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInTable="sortColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="materialName" msprop:Generator_UserColumnName="materialName" msprop:Generator_ColumnPropNameInRow="materialName" msprop:Generator_ColumnVarNameInTable="columnmaterialName" msprop:Generator_ColumnPropNameInTable="materialNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="model" msprop:Generator_UserColumnName="model" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInTable="modelColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="grossWeight" msprop:Generator_UserColumnName="grossWeight" msprop:Generator_ColumnPropNameInRow="grossWeight" msprop:Generator_ColumnVarNameInTable="columngrossWeight" msprop:Generator_ColumnPropNameInTable="grossWeightColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tare" msprop:Generator_UserColumnName="tare" msprop:Generator_ColumnPropNameInRow="tare" msprop:Generator_ColumnVarNameInTable="columntare" msprop:Generator_ColumnPropNameInTable="tareColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="suttle" msprop:Generator_UserColumnName="suttle" msprop:Generator_ColumnPropNameInRow="suttle" msprop:Generator_ColumnVarNameInTable="columnsuttle" msprop:Generator_ColumnPropNameInTable="suttleColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="personnel" msprop:Generator_UserColumnName="personnel" msprop:Generator_ColumnPropNameInRow="personnel" msprop:Generator_ColumnVarNameInTable="columnpersonnel" msprop:Generator_ColumnPropNameInTable="personnelColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

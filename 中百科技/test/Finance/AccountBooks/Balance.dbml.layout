@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Balance">
+  <DataContextMoniker Name="/BalanceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a873b32c-2d0a-49b5-8c6a-44eb4797ecc4" absoluteBounds="4.125, 2.375, 2, 2.9659244791666666">
+      <DataClassMoniker Name="/BalanceDataContext/FundsRecorder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="042285f7-7921-49d8-89e2-230d250d9e5b" absoluteBounds="4.14, 2.835, 1.9700000000000002, 2.4059244791666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a6c0d41-8d27-468a-b842-cabc744d16bf" absoluteBounds="1.125, 2.375, 2, 2.1228255208333326">
+      <DataClassMoniker Name="/BalanceDataContext/Arrearage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed10a823-19e0-482b-9164-14339c4e7d09" absoluteBounds="1.1400000000000001, 2.835, 1.9700000000000002, 1.5628255208333333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cdc94daf-ad9c-45f0-850d-db6f7b40ccb5" absoluteBounds="7, 2.375, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/BalanceDataContext/AccountReceivable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3bbfd858-7838-42c6-80ad-d6d5957b4921" absoluteBounds="7.015, 2.835, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

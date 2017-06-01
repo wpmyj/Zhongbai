@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ResourceConsumeDataSet" targetNamespace="http://tempuri.org/ResourceConsumeDataSet.xsd" xmlns:mstns="http://tempuri.org/ResourceConsumeDataSet.xsd" xmlns="http://tempuri.org/ResourceConsumeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DasherStationConnetionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DasherStationConnetionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DasherStation.Properties.Settings.GlobalReference.Default.DasherStationConnetionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="resourceConsumeTableAdapter" GeneratorDataComponentClassName="resourceConsumeTableAdapter" Name="resourceConsume" UserDataComponentName="resourceConsumeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DasherStationConnetionString (Settings)" DbObjectName="SELECT CONVERT(varchar(7), mixture.produceDate, 120) AS 生产月份, equipmentInformation.no AS 设备编号, materialName.name AS 燃料名称, materialModel.model AS 规格型号, ISNULL(mixture.fuelWastage2, mixture.fuelWastage1) AS 燃料用量, mixture.consumeCoulometry AS 用电量 FROM dasherResourceConsumeDailyStatistics AS mixture LEFT OUTER JOIN equipmentInformation ON mixture.eiId = equipmentInformation.id LEFT OUTER JOIN material ON mixture.mId = material.id LEFT OUTER JOIN materialName ON material.mnId = materialName.id LEFT OUTER JOIN materialModel ON material.mmId = materialModel.id UNION ALL SELECT CONVERT(varchar(7), asphaltum.produceDate, 120) AS 生产月份, equipmentInformation_2.no AS 设备编号, materialName_2.name AS 燃料名称, materialModel_2.model AS 规格型号, ISNULL(asphaltum.fuelWastage2, asphaltum.fuelWastage1) AS 燃料用量, asphaltum.consumeCoulometry AS 用电量 FROM asphaltumConsumeDailyStatistics AS asphaltum LEFT OUTER JOIN equipmentInformation AS equipmentInformation_2 ON asphaltum.eiId = equipmentInformation_2.id LEFT OUTER JOIN material AS material_2 ON asphaltum.mId = material_2.id LEFT OUTER JOIN materialName AS materialName_2 ON material_2.mnId = materialName_2.id LEFT OUTER JOIN materialModel AS materialModel_2 ON material_2.mmId = materialModel_2.id UNION ALL SELECT CONVERT(varchar(7), asphaltum.produceDate, 120) AS 生产月份, equipmentInformation_1.no AS 设备编号, materialName_1.name AS 燃料名称, materialModel_1.model AS 规格型号, ISNULL(asphaltum.fuelWastage2, asphaltum.fuelWastage1) AS 燃料用量, asphaltum.consumeCoulometry AS 用电量 FROM rebuildAsphaltConsumeDailyStatistics AS asphaltum LEFT OUTER JOIN equipmentInformation AS equipmentInformation_1 ON asphaltum.eiId = equipmentInformation_1.id LEFT OUTER JOIN material AS material_1 ON asphaltum.mId = material_1.id LEFT OUTER JOIN materialName AS materialName_1 ON material_1.mnId = materialName_1.id LEFT OUTER JOIN materialModel AS materialModel_1 ON material_1.mmId = materialModel_1.id UNION ALL SELECT CONVERT(varchar(7), deepFat.produceDate, 120) AS 生产月份, equipmentInformation_3.no AS 设备编号, materialName_3.name AS 燃料名称, materialModel_3.model AS 规格型号, ISNULL(deepFat.fuelWastage2, deepFat.fuelWastage1) AS 燃料用量, deepFat.consumeCoulometry AS 用电量 FROM deepFatConsumeDailyStatistics AS deepFat LEFT OUTER JOIN equipmentInformation AS equipmentInformation_3 ON deepFat.eiId = equipmentInformation_3.id LEFT OUTER JOIN material AS material_3 ON deepFat.mId = material_3.id LEFT OUTER JOIN materialName AS materialName_3 ON material_3.mnId = materialName_3.id LEFT OUTER JOIN materialModel AS materialModel_3 ON material_3.mmId = materialModel_3.id" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 生产月份, 设备编号, 燃料名称, 规格型号, SUM(燃料用量) AS 当月燃料用量, 
+      SUM(用电量) AS 当月用电量
+FROM (SELECT CONVERT(varchar(7), mixture.produceDate, 120) AS 生产月份, 
+              equipmentInformation.no AS 设备编号, materialName.name AS 燃料名称, 
+              materialModel.model AS 规格型号, ISNULL(mixture.fuelWastage2, 
+              mixture.fuelWastage1) AS 燃料用量, 
+              mixture.consumeCoulometry AS 用电量
+        FROM dasherResourceConsumeDailyStatistics AS mixture LEFT OUTER JOIN
+              equipmentInformation ON 
+              mixture.eiId = equipmentInformation.id LEFT OUTER JOIN
+              material ON mixture.mId = material.id LEFT OUTER JOIN
+              materialName ON material.mnId = materialName.id LEFT OUTER JOIN
+              materialModel ON material.mmId = materialModel.id
+        UNION ALL
+        SELECT CONVERT(varchar(7), asphaltum.produceDate, 120) AS 生产月份, 
+              equipmentInformation_2.no AS 设备编号, materialName_2.name AS 燃料名称, 
+              materialModel_2.model AS 规格型号, ISNULL(asphaltum.fuelWastage2, 
+              asphaltum.fuelWastage1) AS 燃料用量, 
+              asphaltum.consumeCoulometry AS 用电量
+        FROM asphaltumConsumeDailyStatistics AS asphaltum LEFT OUTER JOIN
+              equipmentInformation AS equipmentInformation_2 ON 
+              asphaltum.eiId = equipmentInformation_2.id LEFT OUTER JOIN
+              material AS material_2 ON asphaltum.mId = material_2.id LEFT OUTER JOIN
+              materialName AS materialName_2 ON 
+              material_2.mnId = materialName_2.id LEFT OUTER JOIN
+              materialModel AS materialModel_2 ON 
+              material_2.mmId = materialModel_2.id
+        UNION ALL
+        SELECT CONVERT(varchar(7), asphaltum.produceDate, 120) AS 生产月份, 
+              equipmentInformation_1.no AS 设备编号, materialName_1.name AS 燃料名称, 
+              materialModel_1.model AS 规格型号, ISNULL(asphaltum.fuelWastage2, 
+              asphaltum.fuelWastage1) AS 燃料用量, 
+              asphaltum.consumeCoulometry AS 用电量
+        FROM rebuildAsphaltConsumeDailyStatistics AS asphaltum LEFT OUTER JOIN
+              equipmentInformation AS equipmentInformation_1 ON 
+              asphaltum.eiId = equipmentInformation_1.id LEFT OUTER JOIN
+              material AS material_1 ON asphaltum.mId = material_1.id LEFT OUTER JOIN
+              materialName AS materialName_1 ON 
+              material_1.mnId = materialName_1.id LEFT OUTER JOIN
+              materialModel AS materialModel_1 ON 
+              material_1.mmId = materialModel_1.id
+        UNION ALL
+        SELECT CONVERT(varchar(7), deepFat.produceDate, 120) AS 生产月份, 
+              equipmentInformation_3.no AS 设备编号, materialName_3.name AS 燃料名称, 
+              materialModel_3.model AS 规格型号, ISNULL(deepFat.fuelWastage2, 
+              deepFat.fuelWastage1) AS 燃料用量, 
+              deepFat.consumeCoulometry AS 用电量
+        FROM deepFatConsumeDailyStatistics AS deepFat LEFT OUTER JOIN
+              equipmentInformation AS equipmentInformation_3 ON 
+              deepFat.eiId = equipmentInformation_3.id LEFT OUTER JOIN
+              material AS material_3 ON deepFat.mId = material_3.id LEFT OUTER JOIN
+              materialName AS materialName_3 ON 
+              material_3.mnId = materialName_3.id LEFT OUTER JOIN
+              materialModel AS materialModel_3 ON 
+              material_3.mmId = materialModel_3.id) AS CONSUME
+GROUP BY 生产月份, 设备编号, 燃料名称, 规格型号</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="生产月份" DataSetColumn="生产月份" />
+              <Mapping SourceColumn="设备编号" DataSetColumn="设备编号" />
+              <Mapping SourceColumn="燃料名称" DataSetColumn="燃料名称" />
+              <Mapping SourceColumn="规格型号" DataSetColumn="规格型号" />
+              <Mapping SourceColumn="当月燃料用量" DataSetColumn="当月燃料用量" />
+              <Mapping SourceColumn="当月用电量" DataSetColumn="当月用电量" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="basicInfoTableAdapter" GeneratorDataComponentClassName="basicInfoTableAdapter" Name="basicInfo" UserDataComponentName="basicInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DasherStationConnetionString (Settings)" DbObjectName="DasherStation.dbo.basicInfo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [basicInfo] ([dasherName]) VALUES (@dasherName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@dasherName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="dasherName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT dasherName
+FROM basicInfo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="dasherName" DataSetColumn="dasherName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ResourceConsumeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ResourceConsumeDataSet" msprop:Generator_DataSetName="ResourceConsumeDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="resourceConsume" msprop:Generator_UserTableName="resourceConsume" msprop:Generator_RowDeletedName="resourceConsumeRowDeleted" msprop:Generator_RowChangedName="resourceConsumeRowChanged" msprop:Generator_RowClassName="resourceConsumeRow" msprop:Generator_RowChangingName="resourceConsumeRowChanging" msprop:Generator_RowEvArgName="resourceConsumeRowChangeEvent" msprop:Generator_RowEvHandlerName="resourceConsumeRowChangeEventHandler" msprop:Generator_TableClassName="resourceConsumeDataTable" msprop:Generator_TableVarName="tableresourceConsume" msprop:Generator_RowDeletingName="resourceConsumeRowDeleting" msprop:Generator_TablePropName="resourceConsume">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="生产月份" msdata:ReadOnly="true" msprop:Generator_UserColumnName="生产月份" msprop:Generator_ColumnPropNameInRow="生产月份" msprop:Generator_ColumnVarNameInTable="column生产月份" msprop:Generator_ColumnPropNameInTable="生产月份Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="设备编号" msdata:ReadOnly="true" msprop:Generator_UserColumnName="设备编号" msprop:Generator_ColumnPropNameInRow="设备编号" msprop:Generator_ColumnVarNameInTable="column设备编号" msprop:Generator_ColumnPropNameInTable="设备编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="燃料名称" msdata:ReadOnly="true" msprop:Generator_UserColumnName="燃料名称" msprop:Generator_ColumnPropNameInRow="燃料名称" msprop:Generator_ColumnVarNameInTable="column燃料名称" msprop:Generator_ColumnPropNameInTable="燃料名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="规格型号" msdata:ReadOnly="true" msprop:Generator_UserColumnName="规格型号" msprop:Generator_ColumnPropNameInRow="规格型号" msprop:Generator_ColumnVarNameInTable="column规格型号" msprop:Generator_ColumnPropNameInTable="规格型号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="当月燃料用量" msdata:ReadOnly="true" msprop:Generator_UserColumnName="当月燃料用量" msprop:Generator_ColumnPropNameInRow="当月燃料用量" msprop:Generator_ColumnVarNameInTable="column当月燃料用量" msprop:Generator_ColumnPropNameInTable="当月燃料用量Column" type="xs:double" minOccurs="0" />
+              <xs:element name="当月用电量" msdata:ReadOnly="true" msprop:Generator_UserColumnName="当月用电量" msprop:Generator_ColumnPropNameInRow="当月用电量" msprop:Generator_ColumnVarNameInTable="column当月用电量" msprop:Generator_ColumnPropNameInTable="当月用电量Column" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="basicInfo" msprop:Generator_UserTableName="basicInfo" msprop:Generator_RowDeletedName="basicInfoRowDeleted" msprop:Generator_RowChangedName="basicInfoRowChanged" msprop:Generator_RowClassName="basicInfoRow" msprop:Generator_RowChangingName="basicInfoRowChanging" msprop:Generator_RowEvArgName="basicInfoRowChangeEvent" msprop:Generator_RowEvHandlerName="basicInfoRowChangeEventHandler" msprop:Generator_TableClassName="basicInfoDataTable" msprop:Generator_TableVarName="tablebasicInfo" msprop:Generator_RowDeletingName="basicInfoRowDeleting" msprop:Generator_TablePropName="basicInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="dasherName" msprop:Generator_UserColumnName="dasherName" msprop:Generator_ColumnVarNameInTable="columndasherName" msprop:Generator_ColumnPropNameInRow="dasherName" msprop:Generator_ColumnPropNameInTable="dasherNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

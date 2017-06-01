@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProduceProportionDataSet" targetNamespace="http://tempuri.org/ProduceProportionDataSet.xsd" xmlns:mstns="http://tempuri.org/ProduceProportionDataSet.xsd" xmlns="http://tempuri.org/ProduceProportionDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DasherStationConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DasherStationConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DasherStation.Properties.Settings.GlobalReference.Default.DasherStationConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="produceProportionTableAdapter" GeneratorDataComponentClassName="produceProportionTableAdapter" Name="produceProportion" UserDataComponentName="produceProportionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DasherStationConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT produceProportion.id, produceProportion.inputDate, produceProportion.producer, productKind.sort, productModel.model, productName.name,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail
+                    WHERE  (ppId = @id) AND (produceProportion = '沥青')) AS L,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_9
+                    WHERE  (ppId = @id) AND (produceProportion = '石粉')) AS S,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_8
+                    WHERE  (ppId = @id) AND (produceProportion = '1号料仓')) AS One,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_7
+                    WHERE  (ppId = @id) AND (produceProportion = '2号料仓')) AS Two,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_6
+                    WHERE  (ppId = @id) AND (produceProportion = '3号料仓')) AS Three,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_5
+                    WHERE  (ppId = @id) AND (produceProportion = '4号料仓')) AS Four,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_4
+                    WHERE  (ppId = @id) AND (produceProportion = '5号料仓')) AS Five,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_3
+                    WHERE  (ppId = @id) AND (produceProportion = '6号料仓')) AS Six,
+                   (SELECT  produceProportionValue
+                    FROM     produceProportionDetail AS produceProportionDetail_2
+                    WHERE  (ppId = @id) AND (produceProportion = '填料')) AS T, basicInfo.dasherName
+FROM     produceProportionDetail AS produceProportionDetail_1 INNER JOIN
+               produceProportion ON produceProportionDetail_1.ppId = produceProportion.id INNER JOIN
+               product ON produceProportion.pId = product.id INNER JOIN
+               productName INNER JOIN
+               productKind ON productName.pkId = productKind.id ON product.pnId = productName.id INNER JOIN
+               productModel ON product.pmId = productModel.id CROSS JOIN
+               basicInfo
+WHERE  (produceProportion.id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="DasherStation.dbo.produceProportion" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@id" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="inputDate" DataSetColumn="inputDate" />
+              <Mapping SourceColumn="producer" DataSetColumn="producer" />
+              <Mapping SourceColumn="sort" DataSetColumn="sort" />
+              <Mapping SourceColumn="model" DataSetColumn="model" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="dasherName" DataSetColumn="dasherName" />
+              <Mapping SourceColumn="L" DataSetColumn="L" />
+              <Mapping SourceColumn="S" DataSetColumn="S" />
+              <Mapping SourceColumn="One" DataSetColumn="One" />
+              <Mapping SourceColumn="Two" DataSetColumn="Two" />
+              <Mapping SourceColumn="Three" DataSetColumn="Three" />
+              <Mapping SourceColumn="Four" DataSetColumn="Four" />
+              <Mapping SourceColumn="Five" DataSetColumn="Five" />
+              <Mapping SourceColumn="Six" DataSetColumn="Six" />
+              <Mapping SourceColumn="T" DataSetColumn="T" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProduceProportionDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ProduceProportionDataSet" msprop:Generator_DataSetName="ProduceProportionDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="produceProportion" msprop:Generator_UserTableName="produceProportion" msprop:Generator_RowDeletedName="produceProportionRowDeleted" msprop:Generator_RowChangedName="produceProportionRowChanged" msprop:Generator_RowClassName="produceProportionRow" msprop:Generator_RowChangingName="produceProportionRowChanging" msprop:Generator_RowEvArgName="produceProportionRowChangeEvent" msprop:Generator_RowEvHandlerName="produceProportionRowChangeEventHandler" msprop:Generator_TableClassName="produceProportionDataTable" msprop:Generator_TableVarName="tableproduceProportion" msprop:Generator_RowDeletingName="produceProportionRowDeleting" msprop:Generator_TablePropName="produceProportion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:long" />
+              <xs:element name="inputDate" msprop:Generator_UserColumnName="inputDate" msprop:Generator_ColumnVarNameInTable="columninputDate" msprop:Generator_ColumnPropNameInRow="inputDate" msprop:Generator_ColumnPropNameInTable="inputDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="producer" msprop:Generator_UserColumnName="producer" msprop:Generator_ColumnVarNameInTable="columnproducer" msprop:Generator_ColumnPropNameInRow="producer" msprop:Generator_ColumnPropNameInTable="producerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sort" msprop:Generator_UserColumnName="sort" msprop:Generator_ColumnVarNameInTable="columnsort" msprop:Generator_ColumnPropNameInRow="sort" msprop:Generator_ColumnPropNameInTable="sortColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="model" msprop:Generator_UserColumnName="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnPropNameInTable="modelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dasherName" msprop:Generator_UserColumnName="dasherName" msprop:Generator_ColumnVarNameInTable="columndasherName" msprop:Generator_ColumnPropNameInRow="dasherName" msprop:Generator_ColumnPropNameInTable="dasherNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="L" msdata:ReadOnly="true" msprop:Generator_UserColumnName="L" msprop:Generator_ColumnVarNameInTable="columnL" msprop:Generator_ColumnPropNameInRow="L" msprop:Generator_ColumnPropNameInTable="LColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="S" msdata:ReadOnly="true" msprop:Generator_UserColumnName="S" msprop:Generator_ColumnVarNameInTable="columnS" msprop:Generator_ColumnPropNameInRow="S" msprop:Generator_ColumnPropNameInTable="SColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="One" msdata:ReadOnly="true" msprop:Generator_UserColumnName="One" msprop:Generator_ColumnVarNameInTable="columnOne" msprop:Generator_ColumnPropNameInRow="One" msprop:Generator_ColumnPropNameInTable="OneColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Two" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Two" msprop:Generator_ColumnVarNameInTable="columnTwo" msprop:Generator_ColumnPropNameInRow="Two" msprop:Generator_ColumnPropNameInTable="TwoColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Three" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Three" msprop:Generator_ColumnVarNameInTable="columnThree" msprop:Generator_ColumnPropNameInRow="Three" msprop:Generator_ColumnPropNameInTable="ThreeColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Four" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Four" msprop:Generator_ColumnVarNameInTable="columnFour" msprop:Generator_ColumnPropNameInRow="Four" msprop:Generator_ColumnPropNameInTable="FourColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Five" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Five" msprop:Generator_ColumnVarNameInTable="columnFive" msprop:Generator_ColumnPropNameInRow="Five" msprop:Generator_ColumnPropNameInTable="FiveColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Six" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Six" msprop:Generator_ColumnVarNameInTable="columnSix" msprop:Generator_ColumnPropNameInRow="Six" msprop:Generator_ColumnPropNameInTable="SixColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="T" msdata:ReadOnly="true" msprop:Generator_UserColumnName="T" msprop:Generator_ColumnVarNameInTable="columnT" msprop:Generator_ColumnPropNameInRow="T" msprop:Generator_ColumnPropNameInTable="TColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:produceProportion" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="DasherStation3" Class="HumanResourceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.salaryParameter" Member="SalaryParameter">
+    <Type Name="SalaryParameter">
+      <Column Name="salaryPercent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="endowmentInsurance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="medicare" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="outOfWork" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="injure" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="procreate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="medicare2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="housingAccumulationFund" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="taxBase" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.payrollAdd" Member="PayrollAdd">
+    <Type Name="PayrollAdd">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="updateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kind" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="minusPlace" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="mark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fixupMark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="PayrollAdd_PayOffDetail" Member="PayOffDetail" ThisKey="id" OtherKey="paid" Type="PayOffDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.payOffDetail" Member="PayOffDetail">
+    <Type Name="PayOffDetail">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="paid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="piId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="money" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="month" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PayrollAdd_PayOffDetail" Member="PayrollAdd" ThisKey="paid" OtherKey="id" Type="PayrollAdd" IsForeignKey="true" />
+      <Association Name="PersonnelInfo_PayOffDetail" Member="PersonnelInfo" ThisKey="piId" OtherKey="id" Type="PersonnelInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.salaryItemTemplet" Member="SalaryItemTemplet">
+    <Type Name="SalaryItemTemplet">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item5" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item6" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item7" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item8" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item9" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item10" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item11" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item12" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item13" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item14" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item15" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item16" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item17" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item18" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item19" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item20" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item21" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item22" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item23" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item24" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item25" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item26" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item27" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item28" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item29" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="item30" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.personnelInfo" Member="PersonnelInfo">
+    <Type Name="PersonnelInfo">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="judgeMarry" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="politicalVisage" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tiptopDegree" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="specialty" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="competencyCertificate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IDCard" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="contactMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="contractNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[function]" Member="function" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="functionAssessDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nativePlace" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="startWorkDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="salaryMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="resume" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="hortationCastigate" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dimissionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dimissionReason" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="workDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="kind" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ptId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="basicSalary" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="pId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="PersonnelInfo_PayOffDetail" Member="PayOffDetail" ThisKey="id" OtherKey="piId" Type="PayOffDetail" />
+      <Association Name="PersonnelInfo_PayOffGather" Member="PayOffGather" ThisKey="id" OtherKey="piId" Type="PayOffGather" />
+      <Association Name="Position_PersonnelInfo" Member="Position" ThisKey="pId" OtherKey="id" Type="Position" IsForeignKey="true" />
+      <Association Name="ProduceTeam_PersonnelInfo" Member="ProduceTeam" ThisKey="ptId" OtherKey="id" Type="ProduceTeam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.position" Member="Position">
+    <Type Name="Position">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Position_PersonnelInfo" Member="PersonnelInfo" ThisKey="id" OtherKey="pId" Type="PersonnelInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.produceTeam" Member="ProduceTeam">
+    <Type Name="ProduceTeam">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="did" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="count" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="eiId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ProduceTeam_PersonnelInfo" Member="PersonnelInfo" ThisKey="id" OtherKey="ptId" Type="PersonnelInfo" />
+      <Association Name="Department_ProduceTeam" Member="Department" ThisKey="did" OtherKey="id" Type="Department" IsForeignKey="true" />
+      <Association Name="equipmentInformation_ProduceTeam" Member="EquipmentInformation" ThisKey="eiId" OtherKey="id" Type="EquipmentInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.department" Member="Department">
+    <Type Name="Department">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Department_ProduceTeam" Member="ProduceTeam" ThisKey="id" OtherKey="did" Type="ProduceTeam" />
+      <Association Name="Department_equipmentInformation" Member="EquipmentInformation" ThisKey="id" OtherKey="dId" Type="EquipmentInformation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.payOffGather" Member="PayOffGather">
+    <Type Name="PayOffGather">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="piId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="realIncome" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PayOffGather_PayOffGather2" Member="PayOffGather2" Storage="_payOffGather2" ThisKey="id" OtherKey="pogid" Type="PayOffGather2" />
+      <Association Name="PersonnelInfo_PayOffGather" Member="PersonnelInfo" ThisKey="piId" OtherKey="id" Type="PersonnelInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.payOffGather2" Member="PayOffGather2">
+    <Type Name="PayOffGather2">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pogid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="assessor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="checkupman" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="assessordate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="checkupdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputdate" AutoSync="Never" Type="System.DateTime" DbType="DateTime" IsDbGenerated="true" CanBeNull="true" />
+      <Column Name="inputman" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PayOffGather_PayOffGather2" Member="PayOffGather" ThisKey="pogid" OtherKey="id" Type="PayOffGather" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.equipmentInformation" Member="EquipmentInformation">
+    <Type Name="EquipmentInformation">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="enId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="emId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="dId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="count" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="registrationMark" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="installationPosition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sumPower" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="addMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="primaryValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="remainsValue" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="depreciationYear" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="produceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="factoryNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="contactMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="factoryAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="postCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="workMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="diameter" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="height" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="beginUseTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="contactMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="producer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="dId2" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="kind" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proportionError" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="totalMaterialWeight" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="mark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proportionError2" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Association Name="equipmentInformation_ProduceTeam" Member="ProduceTeam" ThisKey="id" OtherKey="eiId" Type="ProduceTeam" />
+      <Association Name="Department_equipmentInformation" Member="Department" ThisKey="dId" OtherKey="id" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

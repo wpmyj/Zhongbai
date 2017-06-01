@@ -1,0 +1,6 @@
+D:\My Documents\Visual Studio 2008\Projects\DataProcessingService\DataProcessing.Util\bin\Debug\DataProcessing.Util.dll
+D:\My Documents\Visual Studio 2008\Projects\DataProcessingService\DataProcessing.Util\bin\Debug\DataProcessing.Util.pdb
+D:\My Documents\Visual Studio 2008\Projects\DataProcessingService\DataProcessing.Util\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\Visual Studio 2008\Projects\DataProcessingService\DataProcessing.Util\obj\Debug\DataProcessing.Util.dll
+D:\My Documents\Visual Studio 2008\Projects\DataProcessingService\DataProcessing.Util\obj\Debug\DataProcessing.Util.pdb
+D:\My Documents\Visual Studio 2008\Projects\DataProcessingService\DataProcessing.Util\bin\Debug\DataProcessing.Util.dll.config

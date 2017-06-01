@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Monitor">
+  <DataContextMoniker Name="/MonitorDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cfaeac2d-6c8a-4cf8-9f67-bd224effc68e" absoluteBounds="1.375, 1.125, 2, 2.2914453125">
+      <DataClassMoniker Name="/MonitorDataContext/TemperatureNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="718ac154-5cab-4a7b-9164-aab071423aeb" absoluteBounds="1.3900000000000001, 1.585, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5330abda-a6ca-4dca-bc1a-740f91b4581c" absoluteBounds="3.875, 1.125, 2, 1.9542057291666666">
+      <DataClassMoniker Name="/MonitorDataContext/FlowmeterNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="646e5fb8-c2fe-4959-acd0-fcedb8fe7e6d" absoluteBounds="3.8899999999999997, 1.585, 1.9700000000000002, 1.3942057291666665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1f586e9e-4312-42d0-ba19-b4f71d9d345a" absoluteBounds="6.25, 1.125, 2, 2.2914453125">
+      <DataClassMoniker Name="/MonitorDataContext/LiquidPositionNo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a50f8e7d-ffb6-4d84-b783-5f4316c5bedd" absoluteBounds="6.265, 1.585, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

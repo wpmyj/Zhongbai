@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="finance" targetNamespace="http://tempuri.org/finance.xsd" xmlns:mstns="http://tempuri.org/finance.xsd" xmlns="http://tempuri.org/finance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="finance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="finance" msprop:Generator_DataSetName="finance" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="shouldInputRecord" msprop:Generator_UserTableName="shouldInputRecord" msprop:Generator_RowDeletedName="shouldInputRecordRowDeleted" msprop:Generator_RowChangedName="shouldInputRecordRowChanged" msprop:Generator_RowClassName="shouldInputRecordRow" msprop:Generator_RowChangingName="shouldInputRecordRowChanging" msprop:Generator_RowEvArgName="shouldInputRecordRowChangeEvent" msprop:Generator_RowEvHandlerName="shouldInputRecordRowChangeEventHandler" msprop:Generator_TableClassName="shouldInputRecordDataTable" msprop:Generator_TableVarName="tableshouldInputRecord" msprop:Generator_RowDeletingName="shouldInputRecordRowDeleting" msprop:Generator_TablePropName="shouldInputRecord">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="docNum" msprop:Generator_UserColumnName="docNum" msprop:Generator_ColumnPropNameInRow="docNum" msprop:Generator_ColumnVarNameInTable="columndocNum" msprop:Generator_ColumnPropNameInTable="docNumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="supplierName" msprop:Generator_UserColumnName="supplierName" msprop:Generator_ColumnPropNameInRow="supplierName" msprop:Generator_ColumnVarNameInTable="columnsupplierName" msprop:Generator_ColumnPropNameInTable="supplierNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="invoiceNum" msprop:Generator_UserColumnName="invoiceNum" msprop:Generator_ColumnPropNameInRow="invoiceNum" msprop:Generator_ColumnVarNameInTable="columninvoiceNum" msprop:Generator_ColumnPropNameInTable="invoiceNumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="shouldMoney" msprop:Generator_UserColumnName="shouldMoney" msprop:Generator_ColumnPropNameInRow="shouldMoney" msprop:Generator_ColumnVarNameInTable="columnshouldMoney" msprop:Generator_ColumnPropNameInTable="shouldMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="alreadyMoney" msprop:Generator_UserColumnName="alreadyMoney" msprop:Generator_ColumnPropNameInRow="alreadyMoney" msprop:Generator_ColumnVarNameInTable="columnalreadyMoney" msprop:Generator_ColumnPropNameInTable="alreadyMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="arrearsMoney" msprop:Generator_UserColumnName="arrearsMoney" msprop:Generator_ColumnPropNameInRow="arrearsMoney" msprop:Generator_ColumnVarNameInTable="columnarrearsMoney" msprop:Generator_ColumnPropNameInTable="arrearsMoneyColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="receivablesRecord" msprop:Generator_UserTableName="receivablesRecord" msprop:Generator_RowDeletedName="receivablesRecordRowDeleted" msprop:Generator_RowChangedName="receivablesRecordRowChanged" msprop:Generator_RowClassName="receivablesRecordRow" msprop:Generator_RowChangingName="receivablesRecordRowChanging" msprop:Generator_RowEvArgName="receivablesRecordRowChangeEvent" msprop:Generator_RowEvHandlerName="receivablesRecordRowChangeEventHandler" msprop:Generator_TableClassName="receivablesRecordDataTable" msprop:Generator_TableVarName="tablereceivablesRecord" msprop:Generator_RowDeletingName="receivablesRecordRowDeleting" msprop:Generator_TablePropName="receivablesRecord">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" msprop:Generator_UserColumnName="date" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInTable="dateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="guestName" msprop:Generator_UserColumnName="guestName" msprop:Generator_ColumnPropNameInRow="guestName" msprop:Generator_ColumnVarNameInTable="columnguestName" msprop:Generator_ColumnPropNameInTable="guestNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="invoiceNum" msprop:Generator_UserColumnName="invoiceNum" msprop:Generator_ColumnPropNameInRow="invoiceNum" msprop:Generator_ColumnVarNameInTable="columninvoiceNum" msprop:Generator_ColumnPropNameInTable="invoiceNumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="historyAlreadyMoney" msprop:Generator_UserColumnName="historyAlreadyMoney" msprop:Generator_ColumnPropNameInRow="historyAlreadyMoney" msprop:Generator_ColumnVarNameInTable="columnhistoryAlreadyMoney" msprop:Generator_ColumnPropNameInTable="historyAlreadyMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="arrearsTotalMoney" msprop:Generator_UserColumnName="arrearsTotalMoney" msprop:Generator_ColumnPropNameInRow="arrearsTotalMoney" msprop:Generator_ColumnVarNameInTable="columnarrearsTotalMoney" msprop:Generator_ColumnPropNameInTable="arrearsTotalMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TheIncludeMoney" msprop:Generator_UserColumnName="TheIncludeMoney" msprop:Generator_ColumnPropNameInRow="TheIncludeMoney" msprop:Generator_ColumnVarNameInTable="columnTheIncludeMoney" msprop:Generator_ColumnPropNameInTable="TheIncludeMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="backup" msprop:Generator_UserColumnName="backup" msprop:Generator_ColumnPropNameInRow="backup" msprop:Generator_ColumnVarNameInTable="columnbackup" msprop:Generator_ColumnPropNameInTable="backupColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="shouldOutputRecord" msprop:Generator_UserTableName="shouldOutputRecord" msprop:Generator_RowDeletedName="shouldOutputRecordRowDeleted" msprop:Generator_RowChangedName="shouldOutputRecordRowChanged" msprop:Generator_RowClassName="shouldOutputRecordRow" msprop:Generator_RowChangingName="shouldOutputRecordRowChanging" msprop:Generator_RowEvArgName="shouldOutputRecordRowChangeEvent" msprop:Generator_RowEvHandlerName="shouldOutputRecordRowChangeEventHandler" msprop:Generator_TableClassName="shouldOutputRecordDataTable" msprop:Generator_TableVarName="tableshouldOutputRecord" msprop:Generator_RowDeletingName="shouldOutputRecordRowDeleting" msprop:Generator_TablePropName="shouldOutputRecord">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="docNum" msprop:Generator_UserColumnName="docNum" msprop:Generator_ColumnVarNameInTable="columndocNum" msprop:Generator_ColumnPropNameInRow="docNum" msprop:Generator_ColumnPropNameInTable="docNumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="supplierName" msprop:Generator_UserColumnName="supplierName" msprop:Generator_ColumnVarNameInTable="columnsupplierName" msprop:Generator_ColumnPropNameInRow="supplierName" msprop:Generator_ColumnPropNameInTable="supplierNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="invoiceNum" msprop:Generator_UserColumnName="invoiceNum" msprop:Generator_ColumnVarNameInTable="columninvoiceNum" msprop:Generator_ColumnPropNameInRow="invoiceNum" msprop:Generator_ColumnPropNameInTable="invoiceNumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="shouldMoney" msprop:Generator_UserColumnName="shouldMoney" msprop:Generator_ColumnVarNameInTable="columnshouldMoney" msprop:Generator_ColumnPropNameInRow="shouldMoney" msprop:Generator_ColumnPropNameInTable="shouldMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="alreadyMoney" msprop:Generator_UserColumnName="alreadyMoney" msprop:Generator_ColumnVarNameInTable="columnalreadyMoney" msprop:Generator_ColumnPropNameInRow="alreadyMoney" msprop:Generator_ColumnPropNameInTable="alreadyMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="arrearsMoney" msprop:Generator_UserColumnName="arrearsMoney" msprop:Generator_ColumnVarNameInTable="columnarrearsMoney" msprop:Generator_ColumnPropNameInRow="arrearsMoney" msprop:Generator_ColumnPropNameInTable="arrearsMoneyColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="payablesRecord" msprop:Generator_UserTableName="payablesRecord" msprop:Generator_RowDeletedName="payablesRecordRowDeleted" msprop:Generator_TableClassName="payablesRecordDataTable" msprop:Generator_RowChangedName="payablesRecordRowChanged" msprop:Generator_RowClassName="payablesRecordRow" msprop:Generator_RowChangingName="payablesRecordRowChanging" msprop:Generator_RowEvArgName="payablesRecordRowChangeEvent" msprop:Generator_RowEvHandlerName="payablesRecordRowChangeEventHandler" msprop:Generator_TablePropName="payablesRecord" msprop:Generator_TableVarName="tablepayablesRecord" msprop:Generator_RowDeletingName="payablesRecordRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" msprop:Generator_UserColumnName="date" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInTable="dateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="guestName" msprop:Generator_UserColumnName="guestName" msprop:Generator_ColumnPropNameInRow="guestName" msprop:Generator_ColumnVarNameInTable="columnguestName" msprop:Generator_ColumnPropNameInTable="guestNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="invoiceNum" msprop:Generator_UserColumnName="invoiceNum" msprop:Generator_ColumnPropNameInRow="invoiceNum" msprop:Generator_ColumnVarNameInTable="columninvoiceNum" msprop:Generator_ColumnPropNameInTable="invoiceNumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="historyAlreadyMoney" msprop:Generator_UserColumnName="historyAlreadyMoney" msprop:Generator_ColumnPropNameInRow="historyAlreadyMoney" msprop:Generator_ColumnVarNameInTable="columnhistoryAlreadyMoney" msprop:Generator_ColumnPropNameInTable="historyAlreadyMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="arrearsTotalMoney" msprop:Generator_UserColumnName="arrearsTotalMoney" msprop:Generator_ColumnPropNameInRow="arrearsTotalMoney" msprop:Generator_ColumnVarNameInTable="columnarrearsTotalMoney" msprop:Generator_ColumnPropNameInTable="arrearsTotalMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TheIncludeMoney" msprop:Generator_UserColumnName="TheIncludeMoney" msprop:Generator_ColumnPropNameInRow="TheIncludeMoney" msprop:Generator_ColumnVarNameInTable="columnTheIncludeMoney" msprop:Generator_ColumnPropNameInTable="TheIncludeMoneyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="backup" msprop:Generator_UserColumnName="backup" msprop:Generator_ColumnPropNameInRow="backup" msprop:Generator_ColumnVarNameInTable="columnbackup" msprop:Generator_ColumnPropNameInTable="backupColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

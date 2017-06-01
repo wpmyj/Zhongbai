@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="DasherStation" Class="ProcessingTableDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.202;Initial Catalog=DasherStation;Persist Security Info=True;User ID=sa" SettingsObjectName="DataProcessing.Util.Properties.Settings" SettingsPropertyName="DasherStationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.equipmentInformation" Member="EquipmentInformation">
+    <Type Name="EquipmentInformation">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="enId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="emId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="dId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="count" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="registrationMark" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="installationPosition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sumPower" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="addMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="primaryValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="remainsValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="depreciationYear" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="produceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="factoryNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="contactMethod" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="factoryAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="postCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="workMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="diameter" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="height" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="beginUseTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="contactMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="producer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="dId2" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="kind" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="proportionError" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="totalMaterialWeight" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="mark" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="EquipmentInformation_LiquidMatterStockList" Member="LiquidMatterStockList" ThisKey="id" OtherKey="eiId" Type="LiquidMatterStockList" />
+      <Association Name="EquipmentInformation_ProduceMeasureMonitor" Member="ProduceMeasureMonitor" ThisKey="id" OtherKey="eiId" Type="ProduceMeasureMonitor" />
+      <Association Name="EquipmentInformation_EmulsificationGatherProduceLog" Member="EmulsificationGatherProduceLog" ThisKey="id" OtherKey="eiId" Type="EmulsificationGatherProduceLog" />
+      <Association Name="EquipmentInformation_deepFatConsumeDailyStatisticsDetail" Member="DeepFatConsumeDailyStatisticsDetail" ThisKey="id" OtherKey="eiId" Type="DeepFatConsumeDailyStatisticsDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.flowmeterNo" Member="FlowmeterNo">
+    <Type Name="FlowmeterNo">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="FlowmeterNo_flowmeterHistory" Member="FlowmeterHistory" ThisKey="id" OtherKey="fnId" Type="FlowmeterHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.temperatureNo" Member="TemperatureNo">
+    <Type Name="TemperatureNo">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="minTemperature" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="maxTemperature" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Association Name="TemperatureNo_TemperatureHistory" Member="TemperatureHistory" ThisKey="id" OtherKey="tId" Type="TemperatureHistory" />
+      <Association Name="TemperatureNo_LiquidMatterStockList" Member="LiquidMatterStockList" ThisKey="id" OtherKey="tnId" Type="LiquidMatterStockList" />
+    </Type>
+  </Table>
+  <Table Name="dbo.temperatureHistory" Member="TemperatureHistory">
+    <Type Name="TemperatureHistory">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="tId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="minTemperature" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="maxTemperature" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Association Name="TemperatureNo_TemperatureHistory" Member="TemperatureNo" ThisKey="tId" OtherKey="id" Type="TemperatureNo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.liquidMatterStockList" Member="LiquidMatterStockList">
+    <Type Name="LiquidMatterStockList">
+      <Column Name="id" AutoSync="Never" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eiId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="pId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="mId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="lpnId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="updateDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="updateMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tnId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="EquipmentInformation_LiquidMatterStockList" Member="EquipmentInformation" ThisKey="eiId" OtherKey="id" Type="EquipmentInformation" IsForeignKey="true" />
+      <Association Name="TemperatureNo_LiquidMatterStockList" Member="TemperatureNo" ThisKey="tnId" OtherKey="id" Type="TemperatureNo" IsForeignKey="true" />
+      <Association Name="LiquidPositionNo_LiquidMatterStockList" Member="LiquidPositionNo" ThisKey="lpnId" OtherKey="id" Type="LiquidPositionNo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.liquidPositionNo" Member="LiquidPositionNo">
+    <Type Name="LiquidPositionNo">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="no" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="minValue" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="maxValue" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="position" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LiquidPositionNo_LiquidMatterStockList" Member="LiquidMatterStockList" ThisKey="id" OtherKey="lpnId" Type="LiquidMatterStockList" />
+      <Association Name="LiquidPositionNo_LiquidPositionHistory" Member="LiquidPositionHistory" ThisKey="id" OtherKey="lpnId" Type="LiquidPositionHistory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.liquidPositionHistory" Member="LiquidPositionHistory">
+    <Type Name="LiquidPositionHistory">
+      <Column Name="id" AutoSync="Never" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="lpnId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="LiquidPositionNo_LiquidPositionHistory" Member="LiquidPositionNo" ThisKey="lpnId" OtherKey="id" Type="LiquidPositionNo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.produceMeasureMonitor" Member="ProduceMeasureMonitor">
+    <Type Name="ProduceMeasureMonitor">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ppId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="realMaterialWeight1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="realMaterialWeight2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="realMaterialWeight3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="realMaterialWeight4" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="realMaterialWeight5" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="realMaterialWeight6" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="asphaltumWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="stuffingWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="blockWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="result" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="asphaltumMark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="stoneMark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="pnId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="sumWeight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="temperatureMark" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="pmpId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="eiId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="temperature" Type="System.Decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Association Name="EquipmentInformation_ProduceMeasureMonitor" Member="EquipmentInformation" ThisKey="eiId" OtherKey="id" Type="EquipmentInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.emulsificationGatherProduceLog" Member="EmulsificationGatherProduceLog">
+    <Type Name="EmulsificationGatherProduceLog">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Decimal" DbType="Decimal(14,3)" CanBeNull="true" />
+      <Column Name="asphaltumConsume" Type="System.Decimal" DbType="Decimal(14,3)" CanBeNull="true" />
+      <Column Name="eiId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="EquipmentInformation_EmulsificationGatherProduceLog" Member="EquipmentInformation" ThisKey="eiId" OtherKey="id" Type="EquipmentInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.deepFatConsumeDailyStatisticsDetail" Member="DeepFatConsumeDailyStatisticsDetail">
+    <Type Name="DeepFatConsumeDailyStatisticsDetail">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eiId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fuelWastage" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="piId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(14,2)" CanBeNull="true" />
+      <Association Name="EquipmentInformation_deepFatConsumeDailyStatisticsDetail" Member="EquipmentInformation" ThisKey="eiId" OtherKey="id" Type="EquipmentInformation" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.flowmeterHistory" Member="FlowmeterHistory">
+    <Type Name="FlowmeterHistory">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fnId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(16,4)" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="inputMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="value2" Type="System.Decimal" DbType="Decimal(16,2)" CanBeNull="true" />
+      <Association Name="FlowmeterNo_flowmeterHistory" Member="FlowmeterNo" ThisKey="fnId" OtherKey="id" Type="FlowmeterNo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

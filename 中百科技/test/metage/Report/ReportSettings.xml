@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<ReportSettings>
+  <Test>
+    <ReportName>Test</ReportName>
+    <PrinterName>EPSON LQ-680K II ESC/P2</PrinterName>
+    <PaperName>称重票具</PaperName>
+    <PageWidth>22.96</PageWidth>
+    <PageHeight>12.70</PageHeight>
+    <MarginTop>0</MarginTop>
+    <MarginBottom>0</MarginBottom>
+    <MarginLeft>1.7</MarginLeft>
+    <MarginRight>1.8</MarginRight>
+    <Orientation>Z</Orientation>
+  </Test>
+</ReportSettings>

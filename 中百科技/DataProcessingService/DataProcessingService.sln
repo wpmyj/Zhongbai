@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProcessingService", "DataProcessingService\DataProcessingService.csproj", "{C88C8050-69C3-42AF-BF19-B03096997FA4}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupWizard", "SetupWizard\SetupWizard.vdproj", "{36F86B0B-1C1C-459B-A535-5E1216114D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProcessingService.DataAccess", "DataProcessingService.DataAccess\DataProcessingService.DataAccess.csproj", "{035DC375-2321-4AEC-AF2C-B54C9EF7A8E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProcessing.Model", "DataProcessing.Model\DataProcessing.Model.csproj", "{79EF3FC9-70F4-4097-8839-2967F8229143}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProcessing.Util", "DataProcessing.Util\DataProcessing.Util.csproj", "{B9E067A6-0CDC-42C3-B208-4952861ED83F}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 6
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DataProcessingService.DataAccess\\DataProcessingService.DataAccess.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = DataProcessingService.DataAccess\\
+		SccProjectUniqueName2 = DataProcessingService\\DataProcessingService.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = DataProcessingService\\
+		SccProjectUniqueName3 = SetupWizard\\SetupWizard.vdproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = SetupWizard\\
+		SccProjectUniqueName4 = DataProcessing.Util\\DataProcessing.Util.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = DataProcessing.Util\\
+		SccProjectUniqueName5 = DataProcessing.Model\\DataProcessing.Model.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = DataProcessing.Model\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C88C8050-69C3-42AF-BF19-B03096997FA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88C8050-69C3-42AF-BF19-B03096997FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88C8050-69C3-42AF-BF19-B03096997FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88C8050-69C3-42AF-BF19-B03096997FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F86B0B-1C1C-459B-A535-5E1216114D0B}.Debug|Any CPU.ActiveCfg = Debug
+		{36F86B0B-1C1C-459B-A535-5E1216114D0B}.Release|Any CPU.ActiveCfg = Release
+		{035DC375-2321-4AEC-AF2C-B54C9EF7A8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{035DC375-2321-4AEC-AF2C-B54C9EF7A8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{035DC375-2321-4AEC-AF2C-B54C9EF7A8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{035DC375-2321-4AEC-AF2C-B54C9EF7A8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EF3FC9-70F4-4097-8839-2967F8229143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EF3FC9-70F4-4097-8839-2967F8229143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EF3FC9-70F4-4097-8839-2967F8229143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EF3FC9-70F4-4097-8839-2967F8229143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E067A6-0CDC-42C3-B208-4952861ED83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E067A6-0CDC-42C3-B208-4952861ED83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E067A6-0CDC-42C3-B208-4952861ED83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E067A6-0CDC-42C3-B208-4952861ED83F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
